@@ -8,7 +8,7 @@ import { WalletsModule } from './wallets/wallets.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb://root:root@24.199.81.137:27017/nest?authSource=admin',
+      'mongodb://root:root@137.184.66.18:27017/nest?authSource=admin',
     ),
     AssetsModule,
     WalletsModule,
