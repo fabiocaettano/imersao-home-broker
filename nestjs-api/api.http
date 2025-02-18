@@ -1,6 +1,8 @@
 
 GET http://24.199.81.137:3000/assets
+###
 
+GET http://24.199.81.137:3000/assets/A11
 ###
 
 POST http://24.199.81.137:3000/assets
@@ -12,4 +14,3 @@ Content-Type: application/json
     "price": 100,
     "image": "AMZN.png"
 }
-###
