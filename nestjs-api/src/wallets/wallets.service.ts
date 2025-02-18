@@ -26,12 +26,12 @@ export class WalletsService {
 
   createWalletAsset(data: {
     walletId: string;
-    assetid: string;
+    assetId: string;
     shares: number;
   }) {
     return this.walletAssetSchema.create({
       wallet: data.walletId,
-      asset: data.assetid,
+      asset: data.assetId,
       shares: data.shares,
     });
   }
