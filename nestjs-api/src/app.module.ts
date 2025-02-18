@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AssetsModule } from './assets/assets.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { WalletsModule } from './wallets/wallets.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       'mongodb://root:root@24.199.81.137:27017/nest?authSource=admin',
     ),
     AssetsModule,
+    WalletsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
