@@ -1,33 +1,48 @@
-
+ 
 # @name createAsset
-POST http://24.199.81.137:3000/assets
+POST {{host}}/assets
 Content-Type: application/json
 
 {
-    "name": "Amazon",
-    "symbol": "A1",
+    "name": "Amazon3",
+    "symbol": "A3",
     "price": 100,
     "image": "AMZN.png"
 }
 ###
 
-GET http://24.199.81.137:3000/assets
+@assetId = {{ createAsset.response.body._id }}
 ###
 
-GET http://24.199.81.137:3000/assets/A11
+GET {{host}}/assets
+###
+
+GET {{host}}/assets/A3
 ###
 
 ###
 
 # @name createWallet
-POST http://24.199.81.137:3000/wallets
+POST {{host}}/wallets
 Content-Type: application/json
 ###
 
 @walletId = {{ createWallet.response.body._id }}
 
-GET http://24.199.81.137:3000/wallets
+GET {{host}}/wallets
 ###
 
-GET http://24.199.81.137:3000/wallets/{{ walletId }}
+GET {{host}}/wallets/{{ walletId }}
+###
+
+# @name createWalletAsset
+
+POST {{host}}/wallets/{{walletId}}/assets
+Content-Type: application/json
+
+{
+    "assetId": "{{assetId}}",
+    "shares": 100
+}
+
 ###
