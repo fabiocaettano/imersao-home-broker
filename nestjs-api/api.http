@@ -4,8 +4,8 @@ POST {{host}}/assets
 Content-Type: application/json
 
 {
-    "name": "Amazon3",
-    "symbol": "A3",
+    "name": "Amazon4",
+    "symbol": "A4",
     "price": 100,
     "image": "AMZN.png"
 }
@@ -46,3 +46,20 @@ Content-Type: application/json
 }
 
 ###
+
+# @name createOrder
+
+POST {{host}}/orders
+Content-Type: application/json
+
+{
+    "walletId": "{{walletId}}",
+    "assetId": "{{assetId}}",
+    "shares": 10,
+    "price": 100,
+    "type": "BUY"
+}
+
+###
+
+GET {{host}}/orders?walletId={{walletId}}
