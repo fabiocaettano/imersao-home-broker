@@ -17,7 +17,7 @@ Content-Type: application/json
 GET {{host}}/assets
 ###
 
-GET {{host}}/assets/A3
+GET {{host}}/assets/A4
 ###
 
 ###
