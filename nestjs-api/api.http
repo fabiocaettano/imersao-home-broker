@@ -4,8 +4,8 @@ POST {{host}}/assets
 Content-Type: application/json
 
 {
-    "name": "Amazon4",
-    "symbol": "A4",
+    "name": "Amazon1",
+    "symbol": "A1",
     "price": 100,
     "image": "AMZN.png"
 }
@@ -17,7 +17,7 @@ Content-Type: application/json
 GET {{host}}/assets
 ###
 
-GET {{host}}/assets/A4
+GET {{host}}/assets/A1
 ###
 
 ###
