@@ -20,14 +20,4 @@ export class WalletsController {
   findOne(@Param('id') id: string) {
     return this.walletsService.findOne(id);
   }
-
-  /*@Patch(':id')
-  update(@Param('id') id: string, @Body() updateWalletDto: UpdateWalletDto) {
-    return this.walletsService.update(+id, updateWalletDto);
-  }*/
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.walletsService.remove(+id);
-  }
 }
