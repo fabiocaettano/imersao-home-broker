@@ -2,7 +2,7 @@ import { Table, TableHead, TableHeadCell } from "flowbite-react";
 
 export default function MyAssetsList() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col space-y-5 flex-grow">
       <article className="format">
         <h1>Minha Carteira</h1>
       </article>
