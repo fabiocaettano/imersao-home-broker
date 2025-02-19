@@ -1,4 +1,4 @@
-import { Table, TableHead, TableHeadCell } from "flowbite-react";
+import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell } from "flowbite-react";
 
 export default function MyAssetsList() {
   return (
@@ -14,6 +14,16 @@ export default function MyAssetsList() {
             <TableHeadCell>Quantidade</TableHeadCell>
             <TableHeadCell>Comprar/Vender</TableHeadCell>
           </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell>Ativo</TableCell>
+              <TableCell>Cotação</TableCell>
+              <TableCell>Quantidade</TableCell>
+              <TableCell>
+                <Button color="Ligth">Comprar/Vender</Button>
+              </TableCell>
+            </TableRow>
+          </TableBody>
         </Table>
       </div>    
     </div>
