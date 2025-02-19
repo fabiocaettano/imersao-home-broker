@@ -2,7 +2,7 @@ import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell
 import { Wallet } from "../models";
 
 export async function getMyWallet(walletId: string): Promise<Wallet>{
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/wallets/${walletId}`);
+  const response = await fetch(`http://161.35.14.56:3000/wallets/${walletId}`);
   return response.json();
 }
 
@@ -12,8 +12,8 @@ export default async function MyAssetsList({
   searchParams: Promise<{ wallet_id: string }>;
 }) {
   const { wallet_id }  = await searchParams;
-  const wallet =  await getMyWallet(wallet_id);
-  console.log(wallet);
+  const wallet =  getMyWallet(wallet_id);
+  console.log((await wallet).assets);
   return (
     <div className="flex flex-col space-y-5 flex-grow">
       <article className="format">
@@ -27,18 +27,18 @@ export default async function MyAssetsList({
             <TableHeadCell>Quantidade</TableHeadCell>
             <TableHeadCell>Comprar/Vender</TableHeadCell>
           </TableHead>
-          <TableBody>
-            {wallet.assets.map((walletAsset, key) => (
+          <TableBody>            
+            {(await wallet).assets.map((walletAsset, key ) => (
               <TableRow key={key}>
-              <TableCell>{ walletAsset.asset.name }</TableCell>
-              <TableCell>R$ { walletAsset.asset.price }</TableCell>
-              <TableCell>{ walletAsset.shares }</TableCell>
-              <TableCell>
-                <Button color="Ligth">Comprar/Vender</Button>
-              </TableCell>
+                <TableCell>{walletAsset.asset.name}</TableCell>
+                <TableCell>{walletAsset.asset.price}</TableCell>
+                <TableCell>{walletAsset.shares}</TableCell>
+                <TableCell>
+                  <Button color="blue">Comprar/Vender</Button>
+                </TableCell>
               </TableRow>
-            ))}            
-          </TableBody>
+            ))}
+          </TableBody> 
         </Table>
       </div>    
     </div>
