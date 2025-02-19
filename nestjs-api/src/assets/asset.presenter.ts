@@ -7,9 +7,9 @@ export class AssetPresenter{
         return {
             _id: this.asset._id,
             name: this.asset.name,
-            synbol: this.asset.symbol,
+            symbol: this.asset.symbol,
             price: this.asset.price,
-            image_url: `http://137.184.66.18:9000/${this.asset.image}`,
+            image_url: `${process.env.ASSET_PRESENTERS}/${this.asset.image}`,
         };
     }
 }
