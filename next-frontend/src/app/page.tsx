@@ -2,7 +2,7 @@ import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell
 import { Wallet } from "../models";
 
 export async function getMyWallet(walletId: string): Promise<Wallet>{
-  const response = await fetch(`http://137.184.66.18:3000/wallets/${walletId}`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/wallets/${walletId}`);
   return response.json();
 }
 
