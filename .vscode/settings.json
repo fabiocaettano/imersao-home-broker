@@ -1,7 +1,7 @@
 {
     "rest-client.environmentVariables": {
         "$develop": {
-            "host": "http://137.184.66.18:3000"
+            "host": "http://161.35.14.56:3000"
         }
     }
 }
