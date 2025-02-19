@@ -19,12 +19,5 @@ export class AssetsService {
   findOne(symbol: string) {
     return this.assetSchema.findOne({ symbol });
   }
-
-  /*update(id: number, updateAssetDto: UpdateAssetDto) {
-    return `This action updates a #${id} asset`;
-  }*/
-
-  remove(id: number) {
-    return `This action removes a #${id} asset`;
-  }
+ 
 }

@@ -4,9 +4,9 @@ POST {{host}}/assets
 Content-Type: application/json
 
 {
-    "name": "Amazon2",
-    "symbol": "A2",
-    "price": 100,
+    "name": "Amazon",
+    "symbol": "A1",
+    "price": 194,
     "image": "AMZN.png"
 }
 ###
@@ -56,7 +56,7 @@ Content-Type: application/json
     "walletId": "{{walletId}}",
     "assetId": "{{assetId}}",
     "shares": 10,
-    "price": 100,
+    "price": 194,
     "type": "BUY"
 }
 
