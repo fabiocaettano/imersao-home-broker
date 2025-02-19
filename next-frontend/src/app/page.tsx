@@ -1,6 +1,19 @@
 import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell } from "flowbite-react";
+import { Wallet } from "../models";
 
-export default function MyAssetsList() {
+export async function getMyWallet(walletId: string): Promise<Wallet>{
+  const response = await fetch(`http://137.184.66.18:3000/wallets/${walletId}`);
+  return response.json();
+}
+
+export default async function MyAssetsList({
+  searchParams,
+}: {
+  searchParams: Promise<{ wallet_id: string }>;
+}) {
+  const { wallet_id }  = await searchParams;
+  const wallet =  await getMyWallet(wallet_id);
+  console.log(wallet);
   return (
     <div className="flex flex-col space-y-5 flex-grow">
       <article className="format">
@@ -15,14 +28,16 @@ export default function MyAssetsList() {
             <TableHeadCell>Comprar/Vender</TableHeadCell>
           </TableHead>
           <TableBody>
-            <TableRow>
-              <TableCell>Ativo</TableCell>
-              <TableCell>Cotação</TableCell>
-              <TableCell>Quantidade</TableCell>
+            {wallet.assets.map((walletAsset, key) => (
+              <TableRow key={key}>
+              <TableCell>{ walletAsset.asset.name }</TableCell>
+              <TableCell>R$ { walletAsset.asset.price }</TableCell>
+              <TableCell>{ walletAsset.shares }</TableCell>
               <TableCell>
                 <Button color="Ligth">Comprar/Vender</Button>
               </TableCell>
-            </TableRow>
+              </TableRow>
+            ))}            
           </TableBody>
         </Table>
       </div>    
