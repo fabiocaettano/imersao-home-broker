@@ -4,10 +4,10 @@ POST {{host}}/assets
 Content-Type: application/json
 
 {
-    "name": "Amazon",
-    "symbol": "A1",
-    "price": 194,
-    "image": "AMZN.png"
+    "name": "Mercado Libre",
+    "symbol": "MELI",
+    "price": 700,
+    "image": "MELI.png"
 }
 ###
 
