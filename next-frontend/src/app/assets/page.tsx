@@ -1,14 +1,22 @@
 import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell } from "flowbite-react";
 import { Asset } from "../../models";
 import { AssetShow } from "@/components/AssetShow";
+import { WalletList } from "@/components/WalletList";
 
 export async function getAssets(): Promise<Asset[]>{
   const response = await fetch(`${process.env.NEST_PUBLIC_API_BASE_URL}/assets`);
   return response.json();
 }
 
-export default async function AssetsListPage() {
-  //const { wallet_id }  = await searchParams;
+export default async function AssetsListPage(
+  { searchParams, }:{ searchParams: Promise<{wallet_id : string }>;}
+  ) {
+  
+  const { wallet_id }  = await searchParams;
+
+  if(! wallet_id) {
+    return <WalletList />
+  }
   const assets =  getAssets();
   
   return (

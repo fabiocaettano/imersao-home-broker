@@ -1,6 +1,8 @@
 import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell } from "flowbite-react";
 import { Wallet } from "../models";
 import { AssetShow } from "@/components/AssetShow";
+import { WalletList } from "@/components/WalletList";
+import Link from "next/link";
 
 export async function getMyWallet(walletId: string): Promise<Wallet>{
   const response = await fetch(`${process.env.NEST_PUBLIC_API_BASE_URL}/wallets/${walletId}`);
@@ -13,9 +15,19 @@ export default async function MyAssetsList({
   searchParams,
 }: {
   searchParams: Promise<{ wallet_id: string }>;
-}) {
+}) { 
   const { wallet_id }  = await searchParams;
+  
+  if(!wallet_id){
+    return <WalletList />
+  }
+
   const wallet =  getMyWallet(wallet_id);
+
+  if(!wallet){
+    return <WalletList />
+  }
+
   
   return (
     <div className="flex flex-col space-y-5 flex-grow">
@@ -39,7 +51,7 @@ export default async function MyAssetsList({
                 <TableCell>R$ {walletAsset.asset.price}</TableCell>
                 <TableCell>{walletAsset.shares}</TableCell>
                 <TableCell>
-                  <Button color="blue">Comprar/Vender</Button>
+                  <Button color="blue" as={Link} href={`/assets/${walletAsset.asset.symbol}/?wallet_id=${wallet_id}`}>Comprar/Vender</Button>
                 </TableCell>
               </TableRow>
             ))}

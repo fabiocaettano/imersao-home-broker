@@ -3,6 +3,7 @@ import { Order } from "../../models";
 import { AssetShow } from "@/components/AssetShow";
 import { OrderTypeBadge } from "@/components/OrderTypeBadge";
 import { OrderStatusBadge } from "@/components/OrderStatusBadge";
+import { WalletList } from "@/components/WalletList";
 
 export async function getOrders( walletId: string): Promise<Order[]>{
   const response = await fetch(
@@ -16,7 +17,13 @@ export default async function OrdersListPage({
 }: {
   searchParams: Promise<{ wallet_id: string }>;
 }) {
+
   const { wallet_id }  = await searchParams;
+
+  if(!wallet_id){
+    return <WalletList />
+  }
+
   const orders =  getOrders(wallet_id);
   
   return (
