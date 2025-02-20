@@ -4,6 +4,7 @@ import { OrdersController } from './orders.controller';
 import { Order, OrderSchema } from './entities/order.entity';
 import { Mongoose } from 'mongoose';
 import { MongooseModule } from '@nestjs/mongoose';
+import { OrdersGateway } from './orders.gateway';
 
 @Module({
   imports: [
@@ -15,6 +16,6 @@ import { MongooseModule } from '@nestjs/mongoose';
   ]),
   ],
   controllers: [OrdersController],
-  providers: [OrdersService],
+  providers: [OrdersService, OrdersGateway],
 })
 export class OrdersModule {}
