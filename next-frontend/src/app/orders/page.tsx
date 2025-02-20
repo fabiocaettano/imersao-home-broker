@@ -1,16 +1,10 @@
 import { TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell } from "flowbite-react";
-import { Order } from "../../models";
 import { AssetShow } from "@/components/AssetShow";
 import { OrderTypeBadge } from "@/components/OrderTypeBadge";
 import { OrderStatusBadge } from "@/components/OrderStatusBadge";
 import { WalletList } from "@/components/WalletList";
+import { getOrders } from "@/queries/queries";
 
-export async function getOrders( walletId: string): Promise<Order[]>{
-  const response = await fetch(
-    `${process.env.NEST_PUBLIC_API_BASE_URL}/orders?walletId=${walletId}`
-  );
-  return response.json();
-}
 
 export default async function OrdersListPage({
   searchParams,
