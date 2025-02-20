@@ -1,8 +1,8 @@
 import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell } from "flowbite-react";
-import { Wallet } from "../../models";
-import Image from "next/image";
+import { Asset } from "../../models";
+import { AssetShow } from "@/components/AssetShow";
 
-export async function getAssets(): Promise<Wallet>{
+export async function getAssets(): Promise<Asset[]>{
   const response = await fetch(`${process.env.NEST_PUBLIC_API_BASE_URL}/assets`);
   return response.json();
 }
@@ -12,7 +12,7 @@ export default async function AssetsListPage({
 }: {
   searchParams: Promise<{ wallet_id: string }>;
 }) {
-  //const { wallet_id }  = await searchParams;
+  const { wallet_id }  = await searchParams;
   const assets =  getAssets();
   
   return (
@@ -31,22 +31,11 @@ export default async function AssetsListPage({
             {(await assets).map((asset, key ) => (
               <TableRow key={key}>
                 <TableCell>
-                  <div className="flex space x-1">
-                    <div className="content-center">
-                      <Image                        
-                        src={asset.image_url}                      
-                        alt={asset.symbol}
-                        width={30}
-                        height={30}
-                      />
-                    </div>
-                    <div className="flex flex-col text-sm">
-                      <span>{asset.name} </span>
-                      <span>{asset.symbol} </span>
-                    </div>
-                  </div>
-                </TableCell>
-                <TableCell>R$ {asset.price}</TableCell>
+                  <AssetShow asset={asset}/>                
+                </TableCell>  
+                <TableCell>
+                  R$ {asset.price}
+                </TableCell>                
                 <TableCell>
                   <Button color="blue">Comprar/Vender</Button>
                 </TableCell>
