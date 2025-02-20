@@ -1,0 +1,392 @@
+
+> nestjs-api@0.0.1 start:dev
+> nest start --watch
+
+[2J[3J[H[[90m1:55:08 AM[0m] Starting compilation in watch mode...
+
+[[90m1:55:16 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +42ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +84ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33832  - [39m02/20/2025, 1:55:17 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+
+> nestjs-api@0.0.1 start:dev
+> nest start --watch
+
+[2J[3J[H[[90m1:57:29 AM[0m] Starting compilation in watch mode...
+
+[[90m1:57:37 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +43ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +57ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +7ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 34291  - [39m02/20/2025, 1:57:38 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+ INFO  Accepting connections at http://localhost:40235
+[2J[3J[H[[90m2:41:47 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:41:48 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +59ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +158ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +11ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +7ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+[31m[Nest] 35903  - [39m02/20/2025, 2:41:51 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +5ms[39m
+node:net:1937
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at ExpressAdapter.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/platform-express/adapters/express-adapter.js:109:32)
+    at /root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:173:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async bootstrap (/root/imersao-home-broker/nestjs-api/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.14.0
+[2J[3J[H[[90m2:44:37 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:44:38 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +84ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +113ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+[31m[Nest] 35946  - [39m02/20/2025, 2:44:40 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +6ms[39m
+node:net:1937
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at ExpressAdapter.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/platform-express/adapters/express-adapter.js:109:32)
+    at /root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:173:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async bootstrap (/root/imersao-home-broker/nestjs-api/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.14.0
+[2J[3J[H[[90m2:45:37 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:45:38 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +56ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +148ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +15ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +8ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +10ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35993  - [39m02/20/2025, 2:45:42 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+[2J[3J[H[[90m2:46:11 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:46:12 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +55ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +147ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +5ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36042  - [39m02/20/2025, 2:46:13 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +5ms[39m
+[2J[3J[H[[90m2:49:13 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:49:13 AM[0m] Found 0 errors. Watching for file changes.
+
+Terminated
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +62ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +77ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +5ms[39m
+[31m[Nest] 36200  - [39m02/20/2025, 2:49:15 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +4ms[39m
+node:net:1937
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at ExpressAdapter.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/platform-express/adapters/express-adapter.js:109:32)
+    at /root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:173:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async bootstrap (/root/imersao-home-broker/nestjs-api/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.14.0
+[2J[3J[H[[90m2:50:24 AM[0m] File change detected. Starting incremental compilation...
+
+[96msrc/orders/orders.controller.ts[0m:[93m24[0m:[93m14[0m - [91merror[0m[90m TS1146: [0mDeclaration expected.
+
+[7m24[0m   @Get(':id')
+[7m  [0m [91m             [0m
+
+[96msrc/orders/orders.controller.ts[0m:[93m25[0m:[93m23[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m25[0m   findOne(@Param('id') id: string) {
+[7m  [0m [91m                      [0m
+
+[96msrc/orders/orders.controller.ts[0m:[93m25[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m   findOne(@Param('id') id: string) {
+[7m  [0m [91m                       ~~[0m
+
+[96msrc/orders/orders.controller.ts[0m:[93m25[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m25[0m   findOne(@Param('id') id: string) {
+[7m  [0m [91m                         ~[0m
+
+[96msrc/orders/orders.controller.ts[0m:[93m25[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m25[0m   findOne(@Param('id') id: string) {
+[7m  [0m [91m                                   ~[0m
+
+[96msrc/orders/orders.controller.ts[0m:[93m28[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m28[0m }
+[7m  [0m [91m~[0m
+
+[[90m2:50:24 AM[0m] Found 6 errors. Watching for file changes.
+
+[2J[3J[H[[90m2:53:00 AM[0m] File change detected. Starting incremental compilation...
+
+[[90m2:53:01 AM[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +57ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigHostModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mConfigModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseCoreModule dependencies initialized[39m[38;5;3m +53ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMongooseModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAssetsModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mWalletsModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mOrdersModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +7ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAssetsController {/assets}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, POST} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/assets/:symbol, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mWalletsController {/wallets}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/wallets/:id/assets, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mOrdersController {/orders}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/orders/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +4ms[39m
+[31m[Nest] 36354  - [39m02/20/2025, 2:53:02 AM [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +4ms[39m
+node:net:1937
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1937:16)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at ExpressAdapter.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/platform-express/adapters/express-adapter.js:109:32)
+    at /root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:183:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/root/imersao-home-broker/nestjs-api/node_modules/@nestjs/core/nest-application.js:173:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async bootstrap (/root/imersao-home-broker/nestjs-api/src/main.ts:6:3) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v22.14.0

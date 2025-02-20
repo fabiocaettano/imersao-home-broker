@@ -35,7 +35,7 @@ export default async function MyAssetsList({
                 <TableCell>
                   <AssetShow asset={walletAsset.asset}/>
                 </TableCell>
-                <TableCell>{walletAsset.asset.price}</TableCell>
+                <TableCell>R$ {walletAsset.asset.price}</TableCell>
                 <TableCell>{walletAsset.shares}</TableCell>
                 <TableCell>
                   <Button color="blue">Comprar/Vender</Button>
