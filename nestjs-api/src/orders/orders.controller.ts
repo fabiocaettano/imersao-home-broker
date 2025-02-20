@@ -15,13 +15,13 @@ export class OrdersController {
   @Get()
   async findAll(@Query('walletId') walletId: string) {
     const orders = await this.ordersService.findAll({
-      walletId 
+      walletId,
     });
-    return orders.map((order) => new OrderPresenter(order));  
+    return orders.map((order) => new OrderPresenter(order));
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.ordersService.findOne(id);
-  } 
+  }
 }

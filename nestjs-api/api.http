@@ -42,7 +42,7 @@ Content-Type: application/json
 
 {
     "assetId": "{{assetId}}",
-    "shares": 100
+    "shares": 10
 }
 
 ###
