@@ -1,7 +1,7 @@
 FROM mongo:8.0.3
 
 ENV MONGO_REPLICA_PORT 27017
-ENV MONGO_REPLICA_HOST 161.35.14.56
+ENV MONGO_REPLICA_HOST 192.81.214.94
 
 CMD mongod --port $MONGO_REPLICA_PORT --replSet rs0 --bind_ip 0.0.0.0 & MONGOD_PID=$!; \
     # we prepare the replica set with a single node and prepare the root user config

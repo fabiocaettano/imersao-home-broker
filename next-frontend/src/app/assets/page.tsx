@@ -7,12 +7,8 @@ export async function getAssets(): Promise<Asset[]>{
   return response.json();
 }
 
-export default async function AssetsListPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ wallet_id: string }>;
-}) {
-  const { wallet_id }  = await searchParams;
+export default async function AssetsListPage() {
+  //const { wallet_id }  = await searchParams;
   const assets =  getAssets();
   
   return (
