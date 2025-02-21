@@ -6,7 +6,7 @@ Content-Type: application/json
 {
     "name": "Nvdia",
     "symbol": "NVDA",
-    "price": 1000,
+    "price": 1100,
     "image": "NVDA.png"
 }
 ###
@@ -66,3 +66,21 @@ Content-Type: application/json
 ###
 
 GET {{host}}/orders?walletId={{walletId}}
+
+###
+
+#  Assets Dailies
+
+POST {{host}}/assets/NVDA/dailies
+Content-Type: application/json
+
+{
+    "date" : "2021-12-12",
+    "price" : 121
+}
+
+###
+
+GET {{host}}/assets/NVDA/dailies
+
+###
