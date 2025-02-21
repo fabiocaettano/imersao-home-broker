@@ -2,7 +2,7 @@ import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell
 import { AssetShow } from "@/components/AssetShow";
 import { WalletList } from "@/components/WalletList";
 import { getAssets } from "@/queries/queries";
-
+import Link from "next/link";
 
 export default async function AssetsListPage(
   { searchParams, }:{ searchParams: Promise<{wallet_id : string }>;}
@@ -37,7 +37,14 @@ export default async function AssetsListPage(
                   R$ {asset.price}
                 </TableCell>                
                 <TableCell>
-                  <Button color="blue">Comprar/Vender</Button>
+                  <Button
+                    className="w-fit"
+                    color="light"
+                    as={Link}
+                    href={`/assets/${asset.symbol}?wallet_id=${wallet_id}`}
+                  >
+                  Comprar/vender
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}

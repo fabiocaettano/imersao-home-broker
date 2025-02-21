@@ -44,7 +44,13 @@ export default async function MyAssetsList({
                 <TableCell>R$ {walletAsset.asset.price}</TableCell>
                 <TableCell>{walletAsset.shares}</TableCell>
                 <TableCell>
-                  <Button color="blue" as={Link} href={`/assets/${walletAsset.asset.symbol}/?wallet_id=${wallet_id}`}>Comprar/Vender</Button>
+                  <Button 
+                    className="w-fit"
+                    color="light"
+                    as={Link} 
+                    href={`/assets/${walletAsset.asset.symbol}/?wallet_id=${wallet_id}`}>
+                    Comprar/Vender
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
