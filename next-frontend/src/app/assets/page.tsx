@@ -1,56 +1,53 @@
-import { Button, TableCell, TableRow, Table, TableBody, TableHead, TableHeadCell } from "flowbite-react";
-import { AssetShow } from "@/components/AssetShow";
-import { WalletList } from "@/components/WalletList";
-import { getAssets } from "@/queries/queries";
-import Link from "next/link";
+import {
+  Table,
+  TableBody,
+  TableHead,
+  TableHeadCell,
+} from "flowbite-react";
+import { WalletList } from "../../components/WalletList";
+import { getAssets, getMyWallet } from "../../queries/queries";
+import { AssetsSync } from "../../components/AssetsSync";
+import { TableAssetRow } from "./TableAssetRow";
 
-export default async function AssetsListPage(
-  { searchParams, }:{ searchParams: Promise<{wallet_id : string }>;}
-  ) {
-  
-  const { wallet_id }  = await searchParams;
+export default async function AssetsListPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ wallet_id: string }>;
+}) {
+  const { wallet_id } = await searchParams;
 
-  if(! wallet_id) {
-    return <WalletList />
+  if (!wallet_id) {
+    return <WalletList />;
   }
-  const assets =  getAssets();
-  
+
+  const wallet = await getMyWallet(wallet_id);
+
+  if (!wallet) {
+    return <WalletList />;
+  }
+
+  const assets = await getAssets();
+
   return (
     <div className="flex flex-col space-y-5 flex-grow">
       <article className="format">
         <h1>Ativos</h1>
       </article>
-      <div className="overflox-x-auto w-full">
+      <div className="overflow-x-auto w-full">
         <Table className="w-full max-w-full table-fixed">
           <TableHead>
             <TableHeadCell>Ativo</TableHeadCell>
-            <TableHeadCell>Cotação</TableHeadCell>            
-            <TableHeadCell>Comprar/Vender</TableHeadCell>
+            <TableHeadCell>Cotação</TableHeadCell>
+            <TableHeadCell>Comprar/vender</TableHeadCell>
           </TableHead>
-          <TableBody>            
-            {(await assets).map((asset, key ) => (
-              <TableRow key={key}>
-                <TableCell>
-                  <AssetShow asset={asset}/>                
-                </TableCell>  
-                <TableCell>
-                  R$ {asset.price}
-                </TableCell>                
-                <TableCell>
-                  <Button
-                    className="w-fit"
-                    color="light"
-                    as={Link}
-                    href={`/assets/${asset.symbol}?wallet_id=${wallet_id}`}
-                  >
-                  Comprar/vender
-                  </Button>
-                </TableCell>
-              </TableRow>
+          <TableBody>
+            {assets.map((asset, key) => (
+              <TableAssetRow key={key} asset={asset} walletId={wallet_id} />
             ))}
-          </TableBody> 
+          </TableBody>
         </Table>
-      </div>    
+      </div>
+      <AssetsSync assetsSymbols={assets.map((asset) => asset.symbol)} />
     </div>
   );
 }

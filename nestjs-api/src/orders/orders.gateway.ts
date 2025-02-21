@@ -2,7 +2,13 @@ import { SubscribeMessage, WebSocketGateway } from '@nestjs/websockets';
 import { OrdersService } from './orders.service';
 import { OrderType } from './entities/order.entity';
 
-@WebSocketGateway()
+@WebSocketGateway({
+  cors: {
+    origin: '*', // Permite todas as origens (não recomendado para produção)
+    methods: ['GET', 'POST'],
+    credentials: true,
+  },
+})
 export class OrdersGateway {
   constructor(private ordersService: OrdersService) {}
   @SubscribeMessage('orders/create')

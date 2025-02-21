@@ -19,12 +19,14 @@ export function OrderForm(props: {
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    const data = Object.fromEntries(formData.entries());   
+   
     
-    const socket = io(`${process.env.WS_URI}`, {
+    const socket = io(`${process.env.NEXT_PUBLIC_WEBSOCKET}`, {      
       autoConnect: false,
       transports: ['websocket'], // Força o uso de WebSocket
     });
+
     socket.connect();
     
     const newOrder: Order = await socket.emitWithAck("orders/create", data);
@@ -32,6 +34,7 @@ export function OrderForm(props: {
       `Ordem de ${translatedType} de ${newOrder.shares} ações de ${props.asset.symbol} criada com sucesso`,
       { type: "success", position: "top-right" }
     );
+    
   }
 
   return (

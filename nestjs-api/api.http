@@ -20,6 +20,9 @@ GET {{host}}/assets
 GET {{host}}/assets/NVDA
 ###
 
+
+GET {{host}}/assets/NVDA/dailies
+
 ###
 
 # @name createWallet
