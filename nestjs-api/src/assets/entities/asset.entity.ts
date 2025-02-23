@@ -26,7 +26,7 @@ export class Asset {
   image: string;
 
   @Prop()
-  price: string;
+  price: number;
 
   createdAt!: Date;
   updatedAt!: Date;
