@@ -27,7 +27,7 @@ func main() {
 	// - group.id: identificador do grupo de consumo
 	// - auto.offset.reset: de onde começar a ler as mensagens
 	consumerConfig := &ckafka.ConfigMap{
-		"bootstrap.servers": "host.docker.internal:9094",
+		"bootstrap.servers": "172.19.0.3:9094",
 		"group.id":          "trade",
 		"auto.offset.reset": "latest",
 	}
@@ -35,7 +35,7 @@ func main() {
 	// Configuração do produtor Kafka
 	// - bootstrap.servers: endereço do broker Kafka
 	producerConfig := &ckafka.ConfigMap{
-		"bootstrap.servers": "host.docker.internal:9094",
+		"bootstrap.servers": "172.19.0.3:9094",
 	}
 
 	// Inicializa produtor e consumidor Kafka
@@ -53,6 +53,7 @@ func main() {
 	go func() {
 		for msg := range kafkaMsgChan {
 			wg.Add(1) // Incrementa o contador do WaitGroup para cada ordem
+			fmt.Println("Mensagens: Recebidas do Kafka:")
 			fmt.Println(string(msg.Value))
 
 			// Converte a mensagem JSON recebida para struct
