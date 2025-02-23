@@ -27,6 +27,7 @@ export class OrderConsumer {
 
   @EventPattern('output')
   async handleTrade(@Payload() message: TradeKafkaMessage) {
+    console.log(message);
     const transaction = message.transactions[message.transactions.length - 1];
     await this.ordersService.createTrade({
       orderId: message.order_id,
