@@ -30,6 +30,7 @@ func main() {
 		"bootstrap.servers": "165.227.91.241:9094",
 		"group.id":          "trade",
 		"auto.offset.reset": "latest",
+		
 	}
 
 	// Configuração do produtor Kafka
@@ -40,7 +41,7 @@ func main() {
 
 	// Inicializa produtor e consumidor Kafka
 	producer := kafka.NewKafkaProducer(producerConfig)
-	consumer := kafka.NewConsumer(consumerConfig, []string{"orders"})
+	consumer := kafka.NewConsumer(consumerConfig, []string{"input"})
 
 	// Inicia o consumo de mensagens em uma goroutine separada
 	go consumer.Consume(kafkaMsgChan)
@@ -80,7 +81,7 @@ func main() {
 
 		// Imprime e publica o resultado no Kafka
 		fmt.Println(string(jsonOutput))
-		producer.Publish(jsonOutput, []byte("processed_orders"), "processed_orders")
+		producer.Publish(jsonOutput, []byte("output"), "output")
 	}
 
 	// Observação: O loop acima mantem o programa rodando indefinidamente

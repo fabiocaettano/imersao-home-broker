@@ -1,19 +1,21 @@
 package kafka
 
-import ckafka "github.com/confluentinc/confluent-kafka-go/kafka"
+import (
+	"github.com/confluentinc/confluent-kafka-go/kafka"
+)
 
 // Consumer encapsula a funcionalidade de consumo de mensagens do Kafka
 // Permite consumir mensagens de múltiplos tópicos simultaneamente
 type Consumer struct {
-	ConfigMap *ckafka.ConfigMap // Configurações de conexão com o Kafka
-	Topics    []string          // Lista de tópicos para consumir mensagens
+	ConfigMap *kafka.ConfigMap // Configurações de conexão com o Kafka
+	Topics    []string         // Lista de tópicos para consumir mensagens
 }
 
 // NewConsumer cria uma nova instância do consumidor Kafka
 // Parâmetros:
 // - configMap: mapa de configurações do Kafka (ex: broker, grupo de consumo, etc)
 // - topics: lista de tópicos que serão consumidos
-func NewConsumer(configMap *ckafka.ConfigMap, topics []string) *Consumer {
+func NewConsumer(configMap *kafka.ConfigMap, topics []string) *Consumer {
 	return &Consumer{
 		ConfigMap: configMap,
 		Topics:    topics,
@@ -25,9 +27,9 @@ func NewConsumer(configMap *ckafka.ConfigMap, topics []string) *Consumer {
 // Este método bloqueia e roda indefinidamente até que ocorra um erro
 // Parâmetro:
 // - msgChan: canal onde as mensagens consumidas serão enviadas
-func (c *Consumer) Consume(msgChan chan *ckafka.Message) error {
+func (c *Consumer) Consume(msgChan chan *kafka.Message) error {
 	// Cria uma nova instância do consumidor com as configurações
-	consumer, err := ckafka.NewConsumer(c.ConfigMap)
+	consumer, err := kafka.NewConsumer(c.ConfigMap)
 	if err != nil {
 		panic(err)
 	}
