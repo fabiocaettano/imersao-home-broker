@@ -27,7 +27,7 @@ func main() {
 	// - group.id: identificador do grupo de consumo
 	// - auto.offset.reset: de onde começar a ler as mensagens
 	consumerConfig := &ckafka.ConfigMap{
-		"bootstrap.servers": "134.209.113.251:9092",
+		"bootstrap.servers": "165.227.91.241:9094",
 		"group.id":          "trade",
 		"auto.offset.reset": "latest",
 	}
@@ -35,7 +35,7 @@ func main() {
 	// Configuração do produtor Kafka
 	// - bootstrap.servers: endereço do broker Kafka
 	producerConfig := &ckafka.ConfigMap{
-		"bootstrap.servers": "134.209.113.251:9092",
+		"bootstrap.servers": "165.227.91.241:9094",
 	}
 
 	// Inicializa produtor e consumidor Kafka
