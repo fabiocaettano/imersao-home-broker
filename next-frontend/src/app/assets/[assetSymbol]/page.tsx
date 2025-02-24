@@ -3,26 +3,18 @@ import { AssetShow } from "../../../components/AssetShow";
 import { Asset, OrderType } from "../../../models";
 import { TabsItem } from "../../../components/Tabs";
 import { OrderForm } from "../../../components/OrderForm";
-import { AssetChartComponent } from "./AssetChatComponen";
-import { Wallet } from "../../../models";
+import { AssetChartComponent } from "./AssetChartComponen";
+import { getAssetDailies, getMyWallet } from "../../../queries/queries";
 import { WalletList } from "../../../components/WalletList";
+import { Time } from "lightweight-charts";
 import { AssetPrice } from "./AssetPrice";
+import { AssetsSync } from "../../../components/AssetsSync";
 
 export async function getAsset(symbol: string): Promise<Asset> {
   const response = await fetch(`${process.env.NEST_PUBLIC_API_BASE_URL}/assets/${symbol}`);
   return response.json();
 }
 
-export async function getMyWallet(walletId: string): Promise<Wallet> {
-    const response = await fetch(`${process.env.NEST_PUBLIC_API_BASE_URL}/wallets/${walletId}`);
-  
-    /*if (!response.ok) {
-      return null;
-    }*/
-  
-    return response.json();
-  }
-  
 export default async function AssetDashboard({
   params,
   searchParams,
@@ -44,7 +36,11 @@ export default async function AssetDashboard({
   }
 
   const asset = await getAsset(assetSymbol);
-
+  const assetDailies = await getAssetDailies(assetSymbol);
+  const chartData = assetDailies.map((assetDaily) => ({
+    time: (Date.parse(assetDaily.date) / 1000) as Time,
+    value: assetDaily.price,
+  }));
   return (
     <div className="flex flex-col space-y-5 flex-grow">
       <div className="flex flex-col space-y-2">
@@ -76,9 +72,10 @@ export default async function AssetDashboard({
           </Card>
         </div>
         <div className="col-span-3 flex flex-grow">
-          <AssetChartComponent asset={asset} />
+          <AssetChartComponent asset={asset} data={chartData} />
         </div>
       </div>
+      <AssetsSync assetsSymbols={[asset.symbol]} />
     </div>
   );
 }

@@ -26,7 +26,7 @@ export async function getAssetDailies(
   assetSymbol: string
 ): Promise<AssetDaily[]> {
   const response = await fetch(
-    `${process.env.NEST_PUBLIC_API_BASE_URL}/${assetSymbol}/dailies`
+    `${process.env.NEST_PUBLIC_API_BASE_URL}/assets/${assetSymbol}/dailies`
   );
   return response.json();
 }
