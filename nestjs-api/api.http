@@ -6,7 +6,7 @@ Content-Type: application/json
 {
     "name": "Nvdia",
     "symbol": "NVDA",
-    "price": 1100,
+    "price": 100,
     "image": "NVDA.png"
 }
 ###
@@ -58,9 +58,9 @@ Content-Type: application/json
 {
     "walletId": "{{walletId}}",
     "assetId": "{{assetId}}",
-    "shares": 50,
-    "price": 194,
-    "type": "BUY"
+    "shares": 10,
+    "price": 110,
+    "type": "SELL"
 }
 
 ###
