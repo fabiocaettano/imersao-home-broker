@@ -6,6 +6,7 @@ import { OrderForm } from "../../../components/OrderForm";
 import { AssetChartComponent } from "./AssetChatComponen";
 import { Wallet } from "../../../models";
 import { WalletList } from "../../../components/WalletList";
+import { AssetPrice } from "./AssetPrice";
 
 export async function getAsset(symbol: string): Promise<Asset> {
   const response = await fetch(`${process.env.NEST_PUBLIC_API_BASE_URL}/assets/${symbol}`);
@@ -48,7 +49,7 @@ export default async function AssetDashboard({
     <div className="flex flex-col space-y-5 flex-grow">
       <div className="flex flex-col space-y-2">
         <AssetShow asset={asset} />
-        <div className="ml-2 font-bold text-2xl">R$ {asset.price}</div>
+        <AssetPrice asset={asset} />
       </div>
       <div className="grid grid-cols-5 flex-grow gap-2">
         <div className="col-span-2">
