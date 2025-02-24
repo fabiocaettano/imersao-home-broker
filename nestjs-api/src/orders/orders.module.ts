@@ -17,9 +17,11 @@ import {
   WalletAssetSchema,
 } from '../wallets/entities/wallet-asset.entity';
 import * as kafkaLib from '@confluentinc/kafka-javascript';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     MongooseModule.forFeature([
       {
         name: Order.name,
@@ -43,7 +45,7 @@ import * as kafkaLib from '@confluentinc/kafka-javascript';
       provide: kafkaLib.KafkaJS.Kafka,
       useFactory() {
         return new kafkaLib.KafkaJS.Kafka({
-          'bootstrap.servers': '192.81.214.94:9094',
+          'bootstrap.servers': `${process.env.BOOTSTRAP_SERVER}`,
         });
       },
     },

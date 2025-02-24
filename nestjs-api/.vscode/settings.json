@@ -1,0 +1,7 @@
+{
+    "rest-client.environmentVariables": {
+        "$develop": {
+            "host": "http://159.65.236.204:3000"
+        }
+    }
+}
